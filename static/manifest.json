@@ -1,0 +1,15 @@
+{
+	"background_color": "#DFFFF0",
+	"theme_color": "#070E20",
+	"name": "$plitting Money",
+	"short_name": "$plitting",
+	"display": "minimal-ui",
+	"start_url": "/",
+	"icons": [
+		{
+			"src": "logo-splitting.svg",
+			"sizes": "72x72 96x96 128x128 256x256",
+			"type": "image/svg+xml"
+		}
+	]
+}

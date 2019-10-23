@@ -1,0 +1,14 @@
+@import url('https://fonts.googleapis.com/css?family=Fira+Code|Fira+Sans:400,700&display=swap');
+
+:root {
+	--black-100: #070E20;
+	--green-100: #29F392;
+	--green-10: #DFFFF0;
+	--grey-100: #849D91;
+}
+
+body {
+	font-family: 'Fira Sans', Georgia;
+	font-weight: 400;
+	font-size: 16px;
+}

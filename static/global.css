@@ -5,10 +5,12 @@
 	--green-100: #29F392;
 	--green-10: #DFFFF0;
 	--grey-100: #849D91;
+
+	--font-main: 'Fira Sans', Arial, sans-serif;
 }
 
 body {
-	font-family: 'Fira Sans', Georgia;
+	font-family: var(--font-main);
 	font-weight: 400;
 	font-size: 16px;
 }

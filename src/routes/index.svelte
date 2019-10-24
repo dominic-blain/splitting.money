@@ -1,6 +1,12 @@
 <script>
 	import InputText from '../components/forms/InputText.svelte';
-	let people = [];
+	let names = [''];
+
+	let addName = () => {
+		if (names[names.length - 1] !== '') {
+			names = [...names, ''];
+		}
+	}
 </script>
 
 <style>
@@ -46,5 +52,7 @@
 </header>
 
 <main>
-	<InputText />
+	{#each names as name, index}
+		<InputText bind:value={name} handleButtonEnter={addName} {index} />
+	{/each}
 </main>

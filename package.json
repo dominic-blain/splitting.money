@@ -1,5 +1,5 @@
 {
-  "name": "Splitting",
+  "name": "splitting",
   "description": "Easy way to split money between friends",
   "version": "0.0.1",
   "scripts": {
@@ -30,6 +30,7 @@
     "rollup-plugin-commonjs": "^10.0.0",
     "rollup-plugin-node-resolve": "^5.2.0",
     "rollup-plugin-replace": "^2.0.0",
+    "rollup-plugin-json": "^3.1.0",
     "rollup-plugin-svelte": "^5.0.1",
     "rollup-plugin-terser": "^4.0.4"
   }

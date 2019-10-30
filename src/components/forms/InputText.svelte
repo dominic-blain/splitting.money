@@ -2,9 +2,10 @@
     import { onMount } from 'svelte';
 
     export let index;
-    export let placeholder;
+    export let placeholder = '';
     export let value;
-    export let handleButtonEnter;
+    export let handleUpdate;
+    export let inputElement = '';
     
     let element;
     let isFocused = false;
@@ -14,7 +15,7 @@
 
     let handleKeydown = (event) => {
         if (event.key === 'Enter' && isFilled) {
-            handleButtonEnter();
+            handleUpdate(index, value);
         }
     }
 
@@ -24,15 +25,11 @@
 
     let handleBlur = () => {
         isFocused = false;
-        if (isFilled) {
-            handleButtonEnter();
-        }
+        handleUpdate(index, value);
     }
 
     onMount(() => {
-        if (index != 0) {
-            element.focus();
-        }
+        inputElement = element;
     });
 
 </script>
@@ -40,6 +37,7 @@
 <style>
 .ctn {
     position: relative;
+    width: 100%;
     margin-bottom: 10px;
     transition: margin 90ms ease-out;
 }
@@ -114,6 +112,6 @@ input {
 
 <div class="ctn" class:isCompleted>
     <div class="shadow"></div>
-    <input placeholder={index} bind:value={value} on:focus={handleFocus} on:blur={handleBlur} bind:this={element} />
-    <div class="button-enter" class:isVisible={isFilled} on:click={handleButtonEnter}>Press enter</div>
+    <input placeholder={placeholder} bind:value={value} on:focus={handleFocus} on:blur={handleBlur} bind:this={element} />
+    <div class="button-enter" class:isVisible={isFilled} on:click={handleUpdate}>Press enter</div>
 </div>

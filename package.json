@@ -1,6 +1,6 @@
 {
-  "name": "TODO",
-  "description": "TODO",
+  "name": "Splitting",
+  "description": "Easy way to split money between friends",
   "version": "0.0.1",
   "scripts": {
     "dev": "sapper dev",
